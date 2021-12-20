@@ -14,7 +14,7 @@
 
 
 <header class="header">
-    <div class="logo"><a href="index.php">Message System with comments</a></div>
+    <div class="logo"><a href="index.php">Articles with comments</a></div>
     <nav class="navbar">
         <ul>
             <li><a href="#" class="messagePost">Post a message</a></li>

@@ -498,8 +498,8 @@ var _default = function _default() {
     arr.forEach(function (item) {
       var messageBlock = document.createElement("div");
       messageBlock.classList.add("message-block");
-      messageBlock.innerHTML = '<div class="message-title"><b>Title: </b><br><br>' + item.title + '</div>\
-                <div class="message__short-description"><br><b>Short description: </b><br><p>' + item.description + '</p></div>\
+      messageBlock.innerHTML = '<div class="message-title">' + item.title + '</div>\
+                <div class="message__short-description">' + item.description + '</p></div>\
                 <button class="addComment" id ="' + item.id + '">Post a comment</button> \
                 <button class="viewHideComments" id ="' + item.id + '">View  comments</button> \
                 <button class="editMessage" id ="' + item.id + '">Edit message</button> \
@@ -630,7 +630,7 @@ var _default = function _default() {
       response.forEach(function (key, value) {
         var row = document.createElement('div');
         row.classList.add('postedComment');
-        row.innerHTML = '"' + key.commentText + '"' + " posted by " + key.commentator;
+        row.innerHTML = '"' + key.commentText + '"' + " posted by " + key.commentator + " on " + key.commentDate;
         commentsBlock.append(row);
       });
     } else {
@@ -659,7 +659,7 @@ var _default = function _default() {
   var messagesList = mainSection;
   var pageNumbers = document.querySelector("#pagination");
   var currentPage = 1,
-      rows = 2;
+      rows = 4;
 
   var displayList = function displayList(items, wrapper, rowsPerPage, page) {
     wrapper.innerHTML = "";
